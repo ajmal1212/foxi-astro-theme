@@ -21,6 +21,7 @@
     "check": "astro build && tsc && wrangler deploy --dry-run",
     "deploy": "wrangler deploy",
     "build": "astro check && astro build",
+    "postbuild": "mkdir -p worker && mv dist/_worker.js worker/index.js",
     "astro": "astro",
     "preview": "astro build && wrangler dev"
   },
