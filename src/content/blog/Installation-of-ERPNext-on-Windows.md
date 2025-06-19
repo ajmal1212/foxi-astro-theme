@@ -7,7 +7,7 @@ image: '/blog/post-07.jpg'
 tags: ['Finance', 'crypto']
 ---
 
-![Foxi is here.](/blog/post-07.jpg)
+![Codenetic is here.](/blog/post-07.jpg)
 
 ### Install ERPNext on Windows using VirtualBox, Ubuntu Server, and port forwarding.
 
