@@ -2,9 +2,9 @@
 title: 'Installation of ERPNext on Windows'
 pubDate: 2025-06-19T05:00:00Z
 description: 'Install ERPNext on Windows using VirtualBox, Ubuntu Server, and port forwarding.'
-author: 'Eleni K'
+author: 'Ajmal'
 image: '/blog/post-07.jpg'
-tags: ['app', 'announcement']
+tags: ['Finance', 'crypto']
 ---
 
 ![Foxi is here.](/blog/post-07.jpg)
@@ -32,5 +32,7 @@ This article provides one of the best and most optimized ways to install and use
 Prerequisites:
 
 **Oracle VM virtual box**
+
 **Ubuntu Server 22 iso file**
+
 Install the Ubuntu server on the virtual box with 4 GB of RAM, a 2-core processor, and a minimum of 20 GB of disk space. (Reference)
