@@ -1,0 +1,36 @@
+---
+import Layout from '../layouts/Layout.astro'
+
+const SEO = {
+	title: 'Terms of Service',
+	description: 'Read the terms of service for the Foxi social media posting app.'
+}
+---
+
+<Layout title={SEO.title} description={SEO.description}>
+	<section class="max-w-3xl mx-auto py-12 px-6 text-gray-800 dark:text-gray-200">
+		<h1 class="text-4xl font-bold mb-6">Terms of Service</h1>
+		<p class="mb-6">By using our social media posting application (the "App"), you agree to the following terms and conditions.</p>
+
+		<h2 class="text-2xl font-semibold mt-8 mb-2">1. Use of the App</h2>
+		<p class="mb-6">You agree to use the App only for lawful purposes and not to post any content that is abusive, offensive, or violates the terms of connected platforms.</p>
+
+		<h2 class="text-2xl font-semibold mt-8 mb-2">2. Linked Accounts</h2>
+		<p class="mb-6">By linking your social media accounts, you grant us permission to post content on your behalf using the access tokens provided.</p>
+
+		<h2 class="text-2xl font-semibold mt-8 mb-2">3. User Responsibilities</h2>
+		<ul class="list-disc list-inside mb-6">
+			<li>You are responsible for the content you create and post using the App.</li>
+			<li>You agree to comply with the terms and policies of any social platform you connect (e.g., Facebook, Instagram).</li>
+		</ul>
+
+		<h2 class="text-2xl font-semibold mt-8 mb-2">4. Termination</h2>
+		<p class="mb-6">We may suspend or terminate your access to the App if you violate these terms or misuse the service.</p>
+
+		<h2 class="text-2xl font-semibold mt-8 mb-2">5. Limitation of Liability</h2>
+		<p class="mb-6">We are not liable for any damages resulting from your use of the App, including lost data, account bans, or service interruptions.</p>
+
+		<h2 class="text-2xl font-semibold mt-8 mb-2">6. Contact</h2>
+		<p>If you have questions, contact us at <a href="mailto:support@techalgo.online" class="text-blue-400 underline">support@techalgo.online</a>.</p>
+	</section>
+</Layout>

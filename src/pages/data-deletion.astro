@@ -1,0 +1,40 @@
+---
+import Layout from '../layouts/Layout.astro'
+
+const SEO = {
+	title: 'User Data Deletion',
+	description: 'Learn how to request deletion of your data from the Foxi social media posting app.'
+}
+---
+
+<Layout title={SEO.title} description={SEO.description}>
+	<section class="max-w-3xl mx-auto py-12 px-6 text-gray-800 dark:text-gray-200">
+		<h1 class="text-4xl font-bold mb-6">User Data Deletion Instructions</h1>
+
+		<p class="mb-6">If you have connected your social media accounts (Instagram or Facebook) to our app and would like to delete your data, please follow the steps below:</p>
+
+		<h2 class="text-2xl font-semibold mt-8 mb-2">What Data We Store</h2>
+		<p class="mb-2">We may store limited data required to provide services, such as:</p>
+		<ul class="list-disc list-inside mb-6">
+			<li>Your name or social media profile ID</li>
+			<li>Your access token (encrypted)</li>
+			<li>Post metadata (caption, media, schedule time)</li>
+		</ul>
+
+		<h2 class="text-2xl font-semibold mt-8 mb-2">How to Request Deletion</h2>
+		<p class="mb-2">To delete your data, please send a request to our support team:</p>
+		<ul class="list-inside mb-6">
+			<li><strong>📧 Email:</strong> <a href="mailto:support@techalgo.online" class="text-blue-400 underline">support@techalgo.online</a></li>
+			<li><strong>Subject:</strong> Data Deletion Request</li>
+		</ul>
+		<p class="mb-6">Please include:</p>
+		<ul class="list-disc list-inside mb-6">
+			<li>Your email address or user ID used in our app</li>
+			<li>The name of the connected social account</li>
+		</ul>
+		<p class="mb-6">We will process your request within 7 working days.</p>
+
+		<h2 class="text-2xl font-semibold mt-8 mb-2">Automatic Token Expiry</h2>
+		<p>We do not keep your data beyond what’s necessary. Expired or disconnected tokens are purged automatically.</p>
+	</section>
+</Layout>

@@ -35,13 +35,13 @@ export interface FooterData {
 
 export const footerNavigationData: FooterData = {
 	footerAbout: {
-		title: 'Foxi.',
+		title: 'Codenetic.',
 		aboutText:
-			'Expertly made, responsive, accessible components in React and HTML ready to be used on your website or app. Just copy and paste them on your Tailwind CSS project.',
+			'We are a next-gen digital solutions provider focused on helping businesses automate their workflows,',
 		logo: {
 			src: '/logo.svg',
-			alt: 'The tailwind astro theme',
-			text: 'Foxi.'
+			alt: 'codenetic tech solution',
+			text: 'Codenetic.'
 		}
 	},
 	footerColumns: [
@@ -84,6 +84,18 @@ export const footerNavigationData: FooterData = {
 				{
 					subCategory: 'Careers',
 					subCategoryLink: '/blog'
+				},
+				{
+					subCategory: 'Privacy policy',
+					subCategoryLink: '/privacy-policy'
+				},
+				{
+					subCategory: 'Terms of service',
+					subCategoryLink: '/terms-of-service'
+				},
+				{
+					subCategory: 'Data Deletion',
+					subCategoryLink: '/data-deletion'
 				}
 			]
 		},
@@ -106,6 +118,6 @@ export const footerNavigationData: FooterData = {
 		}
 	],
 	subFooter: {
-		copywriteText: '© Foxi 2024.'
+		copywriteText: '© codenetic 2025.'
 	}
 }
