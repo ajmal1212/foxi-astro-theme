@@ -2,7 +2,7 @@
   "name": "foxi",
   "compatibility_date": "2025-04-01",
   "compatibility_flags": ["nodejs_compat"],
-  "main": "./worker/index.js",
+  "main": "./worker/_worker.js/index.js",
   "assets": {
     "directory": "./dist",     
     "binding": "ASSETS"
