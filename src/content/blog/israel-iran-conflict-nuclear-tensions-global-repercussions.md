@@ -4,7 +4,7 @@ description: "Stay updated with the latest developments in the Israel-Iran confl
 pubDate: 2025-06-20T07:00:00Z
 author: 'Ajmal'
 image: '/blog/11.webp'
-tags: ['Latest News']
+tags: ['Latest-News']
 ---
 
 ![Codenetic is here.](/blog/11.webp)

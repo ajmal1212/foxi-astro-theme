@@ -1,0 +1,79 @@
+---
+// src/pages/blog/page/[page].astro
+import Layout from '../../../layouts/Layout.astro'
+import Hero from '../../../components/blocks/hero/PageHeader.astro'
+import BlogPosts from '../../../components/blocks/blog/BlogPosts.astro'
+import Pagination from '../../../components/blocks/blog/pagination.astro'
+import { getCollection } from 'astro:content'
+
+// Export getStaticPaths to generate pages at build time
+export async function getStaticPaths() {
+  // Configuration inside getStaticPaths
+  const POSTS_PER_PAGE = 6
+  
+  // Get all posts to calculate total pages
+  const allPosts = await getCollection('blog')
+  const totalPages = Math.ceil(allPosts.length / POSTS_PER_PAGE)
+  
+  // Generate paths for all pages
+  return Array.from({ length: totalPages }, (_, i) => {
+    const pageNumber = i + 1
+    return {
+      params: { page: pageNumber.toString() },
+      props: {
+        currentPage: pageNumber,
+        totalPages,
+        postsPerPage: POSTS_PER_PAGE  // Pass to component as prop
+      }
+    }
+  })
+}
+
+// Configuration from props
+const { currentPage, totalPages, postsPerPage } = Astro.props
+
+// Get all posts sorted by date
+const allPosts = (await getCollection('blog')).sort(
+  (a, b) => new Date(b.data.pubDate).getTime() - new Date(a.data.pubDate).getTime()
+)
+
+// Handle pagination
+const startIndex = (currentPage - 1) * postsPerPage
+const pagePosts = allPosts.slice(startIndex, startIndex + postsPerPage)
+
+// Redirect if page is invalid
+if (currentPage < 1 || currentPage > totalPages || isNaN(currentPage)) {
+  return Astro.redirect('/blog')
+}
+
+// SEO
+const SEO = {
+  title: currentPage === 1 
+    ? 'Codenetic | Latest News and updates' 
+    : `Codenetic Blog - Page ${currentPage}`,
+  description: currentPage === 1 
+    ? "Explore Codenetic's latest news designed to enhance productivity, ensure top-notch security, and integrate seamlessly with your favorite tools." 
+    : `Page ${currentPage} of Codenetic's blog. Discover more articles about productivity, security, and workflow optimization.`,
+  canonicalUrl: currentPage === 1 
+    ? new URL('/blog', Astro.site).href 
+    : new URL(`/blog/page/${currentPage}`, Astro.site).href
+}
+
+// Page Header
+const header = {
+  title: 'The <strong>Codenetic</strong> Blog. Tips, Updates & Stories',
+  text: 'Stay informed, stay productive. All the latest from the world of Codenetic.'
+}
+---
+
+<Layout title={SEO.title} description={SEO.description}>
+  <Hero title={header.title} text={header.text} />
+  
+  <BlogPosts data={pagePosts} />
+  
+  <Pagination 
+    currentPage={currentPage} 
+    totalPages={totalPages} 
+    baseUrl="/blog" 
+  />
+</Layout>

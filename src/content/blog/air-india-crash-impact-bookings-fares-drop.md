@@ -4,7 +4,7 @@ description: "Following the tragic Air India crash in Ahmedabad, flight bookings
 pubDate: 2025-06-20T08:00:00Z
 author: 'Ajmal'
 image: '/blog/12.webp'
-tags: ['Latest News']
+tags: ['Latest-News']
 ---
 
 ![Codenetic is here.](/blog/12.webp)
