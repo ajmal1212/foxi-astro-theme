@@ -98,7 +98,6 @@ This tragic crash has reminded the world of the **fragile balance between aviati
 In a competitive market driven by **public trust**, airlines must go beyond regulatory compliance and **build emotional assurance** for travelers.
 
 ---
-
 ### Sources
 
 - Livemint Staff Report (20 June 2025): [Air India crash: Bookings down by 20 per cent](https://www.livemint.com)
@@ -106,7 +105,7 @@ In a competitive market driven by **public trust**, airlines must go beyond regu
 - Indian Association of Tour Operators (IATO)
 - Federation of Associations in Indian Tourism & Hospitality (FAITH)
 
----
+
 
 > 📌 *Disclaimer: This blog is for informational purposes based on verified news sources. For flight bookings, passenger safety info, or financial advice, consult certified professionals or official airline representatives.*
 
