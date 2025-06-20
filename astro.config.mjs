@@ -8,6 +8,10 @@ import sitemap from "@astrojs/sitemap";
 
 // https://astro.build/config
 export default defineConfig({
+  trailingSlash: 'never',
+  build: {
+    format: 'file',
+  },
   site: "https://codenetic.tech/",
   integrations: [
     tailwind(),
