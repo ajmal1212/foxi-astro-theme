@@ -1,0 +1,112 @@
+---
+title: "Air India Crash Triggers 20% Drop in Bookings and 15% Fare Dip Across Routes"
+description: "Following the tragic Air India crash in Ahmedabad, flight bookings have dropped by up to 20% and fares by 15% across both domestic and international routes. Industry experts weigh in on the impact and forecast ahead."
+pubDate: 2025-06-20T08:00:00Z
+author: 'Ajmal'
+image: '/blog/12.webp'
+tags: ['Latest News']
+---
+
+![Codenetic is here.](/blog/12.webp)
+
+
+### Air India Crash Triggers 20% Drop in Bookings and 15% Fare Dip Across Routes
+
+The aviation industry is facing turbulent skies after the tragic **Air India crash** on **June 12, 2025**, which resulted in the loss of over **270 lives**. In the aftermath of this devastating incident, both **domestic and international travel sectors** have seen a notable shift in passenger behavior.
+
+### The Incident: A Nation in Shock
+
+Air India’s flight **AI-171**, operating a **Boeing 787 Dreamliner**, crashed into a residential neighborhood in **Meghaninagar, Ahmedabad** shortly after takeoff. The flight was carrying **242 passengers and crew members**, and tragically, only **one survivor** emerged.
+
+#### Immediate Consequences
+
+- The crash led to **nationwide mourning**.
+- Air India's safety protocols and aircraft maintenance practices came under scrutiny.
+- Public sentiment has understandably shifted toward **travel apprehension** with the carrier.
+
+### Travel Industry Reacts
+
+According to **Ravi Gosain**, President of the **Indian Association of Tour Operators (IATO)**:
+
+> “We have observed a temporary decline in bookings, particularly on international sectors… around 18–22% internationally and 10–12% domestically.”
+
+This sentiment-driven reaction appears to be a **short-term response**, likely to stabilize once confidence is rebuilt.
+
+### Fare Adjustments Across Routes
+
+In an effort to revive demand and adapt to lowered passenger volumes, **Air India has adjusted fares downward**.
+
+| Route Type        | Fare Reduction Range |
+|-------------------|----------------------|
+| Domestic Routes   | 8% – 12%             |
+| International Routes | 10% – 15%         |
+
+The reduction is largely influenced by **competition with low-cost carriers** like **IndiGo** and **Akasa**, especially on **Europe and Southeast Asia routes**.
+
+> “These reductions are a mix of promotional strategies and yield correction,” Gosain told PTI.
+
+### Booking Cancellations Spike
+
+Gosain also revealed that the crash has led to **a rise in cancellations**:
+
+- **International cancellations**: up **15% – 18%**
+- **Domestic cancellations**: up **8% – 10%**
+
+Most of these cancellations are from **corporate and high-end leisure travelers**, who have chosen to shift to **alternative carriers** with perceived stronger safety records.
+
+### Industry Insights from FAITH
+
+**Rajiv Mehra**, General Secretary of the **Federation of Associations in Indian Tourism & Hospitality (FAITH)**, corroborated IATO’s findings:
+
+> “As far as Air India is concerned, fares are around 10% cheaper for both domestic and international routes than other airlines on certain sectors.”
+
+He also highlighted a **15% – 20% drop in new bookings** for the carrier post-crash. Mehra called on all airlines to prioritize **aircraft maintenance and safety standards** to restore traveler trust.
+
+### Public Sentiment & Passenger Behavior
+
+The crash has also affected **traveler sentiment**, with a sudden **surge in demand for emergency exit seats** on flights, particularly those labeled **“11A”**, which were linked to survivor seats in the crash.
+
+This behavior underscores how **psychological safety perceptions** now influence ticket booking more than ever.
+
+### Air India’s Silence
+
+Notably, **Air India has not issued an official statement** responding to the fall in bookings or fares. While **Air India CEO** previously claimed the crashed aircraft was **“well-maintained,”** the airline has yet to reassure customers with a broader strategic safety communication plan.
+
+### What Lies Ahead?
+
+While bookings are currently down, experts suggest this could be **a temporary blip**. Historically, airline crashes often lead to short-term dips in revenue and bookings, but brands recover over time with **transparent communication**, **renewed safety measures**, and **public outreach**.
+
+However, whether Air India can **rebuild its brand trust** in a competitive market will depend heavily on:
+
+- **Safety audits and third-party validation**
+- **Visible changes in operational protocols**
+- **Open communication with passengers**
+- **Proactive media engagement**
+
+### A Call for Stringent Safety Oversight
+
+This crash has once again put the spotlight on **aviation regulators**, particularly the **Directorate General of Civil Aviation (DGCA)**. While DGCA has reaffirmed **Air India’s compliance with global safety standards**, public pressure is mounting for:
+
+- **More frequent safety inspections**
+- **Stricter maintenance reporting**
+- **Transparency on aircraft age and flight hours**
+
+### Final Thoughts
+
+This tragic crash has reminded the world of the **fragile balance between aviation convenience and safety**. It is a wake-up call not just for Air India but for all carriers to **reassess safety commitments**, **crisis communication protocols**, and **passenger care strategies**.
+
+In a competitive market driven by **public trust**, airlines must go beyond regulatory compliance and **build emotional assurance** for travelers.
+
+---
+
+### Sources
+
+- Livemint Staff Report (20 June 2025): [Air India crash: Bookings down by 20 per cent](https://www.livemint.com)
+- PTI news agency via Livemint
+- Indian Association of Tour Operators (IATO)
+- Federation of Associations in Indian Tourism & Hospitality (FAITH)
+
+---
+
+> 📌 *Disclaimer: This blog is for informational purposes based on verified news sources. For flight bookings, passenger safety info, or financial advice, consult certified professionals or official airline representatives.*
+
