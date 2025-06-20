@@ -2,35 +2,50 @@
 // Tags for the Blog and post pages
 
 // Components
-// - UI
 import Badge from '../Badge.astro'
 
-//Data
+// Data
 import { getCollection } from 'astro:content'
 const posts = await getCollection('blog')
-const tags = [...new Set(posts.map((post) => post.data.tags).flat())]
-const currentPath = new URL(Astro.request.url).pathname
-const pathSegments = currentPath.split('/').filter((segment) => segment.length > 0)
-const currentTag = pathSegments[pathSegments.length - 1] || ''
+const tags = [...new Set(posts.flatMap(post => post.data.tags))]
+const currentUrl = Astro.url
+
+// Improved tag detection that works with any URL format
+const getCurrentTag = () => {
+  // Handle blog index page
+  if (currentUrl.pathname === '/blog' || currentUrl.pathname === '/blog/') {
+    return 'blog'
+  }
+  
+  // Handle tag pages
+  const tagSegment = currentUrl.pathname.split('/').pop()
+  
+  // Remove possible file extension (.html) and trailing slash
+  return tagSegment?.replace(/(\.html|\/)$/, '') || ''
+}
+
+const currentTag = getCurrentTag()
 ---
 
 <div class="tags">
-	<Badge link={`/blog/`} name={`All`} type={`${currentTag === 'blog' ? 'primary' : 'neutral'}`} />
-	{
-		tags.map((tag) => (
-			<>
-				<Badge
-					link={`/blog/tags/${tag}`}
-					name={tag}
-					type={`${currentTag === tag ? 'primary' : 'neutral'}`}
-				/>
-			</>
-		))
-	}
+  <Badge 
+    link="/blog" 
+    name="All" 
+    type={currentTag === 'blog' ? 'primary' : 'neutral'} 
+  />
+  {
+    tags.map(tag => (
+      <Badge
+        link={`/blog/tags/${tag}`}
+        name={tag}
+        type={currentTag === tag ? 'primary' : 'neutral'}
+      />
+    ))
+  }
 </div>
 
 <style>
-	.tags {
-		@apply mb-6 flex flex-row flex-wrap items-center justify-start gap-2 capitalize;
-	}
+  .tags {
+    @apply mb-6 flex flex-row flex-wrap items-center justify-start gap-2 capitalize;
+  }
 </style>
