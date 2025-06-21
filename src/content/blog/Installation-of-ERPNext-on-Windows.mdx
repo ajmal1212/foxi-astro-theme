@@ -1,0 +1,249 @@
+---
+title: 'Installation of ERPNext on Windows'
+pubDate: 2025-06-19T05:00:00Z
+description: 'Install ERPNext on Windows using VirtualBox, Ubuntu Server, and port forwarding.'
+author: 'Ajmal'
+image: '/blog/post-07.webp'
+tags: ['Tech', 'Frappe',]
+---
+import FaqSchema from '../../components/FaqSchema.astro'
+import NewsSchema from '../../components/NewsSchema.astro'
+
+<NewsSchema
+  headline="Installation of ERPNext on Windows"
+  image={[ '/blog/12.webp'
+  ]}
+  datePublished="2025-06-21T08:00:00+08:00"
+  dateModified="2025-06-21T09:20:00+08:00"
+  authors={[
+    { name: "Ajmal", url: "https://codenetic.tech/profile/ajmal" }
+  ]}
+/>
+
+![Codenetic is here.](/blog/post-07.webp)
+
+### Install ERPNext on Windows using VirtualBox, Ubuntu Server, and port forwarding.
+
+> ✅ **This guide helps you install ERPNext on Windows using Ubuntu Server via VirtualBox — the most optimized and beginner-friendly approach.**
+
+### What is ERP & Why ERPNext?
+
+Enterprise Resource Planning (ERP) systems help organizations integrate various business processes across departments. ERPNext is a powerful open-source solution built on the [Frappe Framework](https://frappeframework.com/), but it natively supports **only Linux**.
+
+If you're a Windows user, don't worry — we’ll show you how to run ERPNext using **Ubuntu Server in VirtualBox**.
+
+### Benefits of ERP Systems
+
+- **Centralized Data:** Real-time access across departments.
+- **Automation:** Automate tasks like invoicing, inventory, HR, and more.
+- **Efficiency:** Streamline workflows and boost productivity.
+- **Reports:** Visualize KPIs using platforms like Metabase or PowerBI.
+
+---
+
+### Prerequisites
+
+- Oracle VM VirtualBox
+- Ubuntu Server 22.04 ISO
+- System: 4GB RAM, 2-Core CPU, 20GB Disk (Minimum)
+- Internet connection
+
+---
+
+### Installation Steps
+
+#### 1. Update System Packages
+
+```bash copy
+sudo apt-get update
+```
+
+#### 2. Install Git
+
+```bash copy
+sudo apt-get install git
+```
+
+#### 3. Install Python
+
+```bash copy
+sudo apt-get install python3-dev python3.10-dev python3-setuptools python3-pip python3-distutils
+```
+
+#### 4. Install MariaDB
+
+```bash copy
+sudo apt install mariadb-server mariadb-client
+```
+
+Use `SPACE`, `ARROW`, and `ENTER` keys to handle prompts.
+
+#### 5. Install Redis
+
+```bash copy
+sudo apt-get install redis-server
+```
+
+#### 6. Install Dependencies
+
+```bash copy
+sudo apt-get install xvfb libfontconfig wkhtmltopdf libmysqlclient-dev
+```
+
+#### 7. Secure MySQL
+
+```bash copy
+sudo mysql_secure_installation
+```
+
+Enter details as follows:
+
+- Switch to unix_socket auth: `Y`
+- Change root password: `Y`
+- Disallow remote root login: `N`
+- Remove anonymous/test DB: `Y`
+
+#### 8. Update MySQL Config
+
+```bash copy
+sudo nano /etc/mysql/my.cnf
+```
+
+Paste:
+
+```
+[mysqld]
+character-set-client-handshake = FALSE
+character-set-server = utf8mb4
+collation-server = utf8mb4_unicode_ci
+
+[mysql]
+default-character-set = utf8mb4
+```
+
+Restart:
+
+```bash copy
+sudo service mysql restart
+```
+
+#### 9. Install Node, NPM, Yarn
+
+```bash copy
+sudo apt install curl
+curl https://raw.githubusercontent.com/creationix/nvm/master/install.sh | bash
+source ~/.profile
+nvm install 16.15.0
+sudo apt-get install npm
+sudo npm install -g yarn
+```
+
+#### 10. Create ERP Folder
+
+```bash copy
+mkdir erp && cd erp
+```
+
+#### 11. Install Frappe Bench
+
+```bash copy
+sudo pip3 install frappe-bench
+```
+
+#### 12. Initialize Bench
+
+```bash copy
+bench init --frappe-branch version-14 frappe-bench
+```
+
+#### 13. Enter Bench Directory
+
+```bash copy
+cd frappe-bench
+```
+
+#### 14. Create a New Site
+
+```bash copy
+bench new-site yoursite.local
+```
+
+#### 15. Install ERPNext App
+
+```bash copy
+bench get-app --branch version-14 erpnext
+bench --site yoursite.local install-app erpnext
+```
+
+### ✅ ERPNext is now installed!
+
+---
+
+### Access via Windows Browser
+
+#### 16. Enable SSH & Port Access
+
+```bash copy
+sudo apt install openssh-server
+sudo ufw enable
+sudo ufw allow 8000
+sudo ufw allow 3306
+```
+
+#### 17. Setup Port Forwarding in VirtualBox
+
+- Go to **Settings → Network → Advanced → Port Forwarding**
+- Add:
+  - Host Port: `8000`, Guest Port: `8000`
+  - Host Port: `3306`, Guest Port: `3306`
+
+#### 18. Run Frappe Server
+
+```bash copy
+bench use yoursite.local
+bench start
+```
+
+Open your browser and go to [http://localhost:8000](http://localhost:8000).
+
+- **Username:** `Administrator`
+- **Password:** The one you set during site creation
+
+---
+
+### 📊 Final Thoughts
+
+Using this method, you can run ERPNext on any Windows machine using Linux inside VirtualBox. It’s perfect for development, learning, and even lightweight production deployments.
+
+If you want to set up Metabase or PowerBI on top of your ERPNext DB, just make sure port `3306` is open as shown above.
+
+Need help? Drop your questions in the comments or visit [codenetic.tech](https://codenetic.tech). 🚀
+
+### Frappe & ERPNext FAQs
+
+Here are some commonly asked questions about Frappe, ERPNext, and the latest Frappe products.
+
+<FaqSchema
+  faqs={[
+    {
+      question: "What is Frappe and how is it related to ERPNext?",
+      answer: "Frappe is a full-stack web framework built on Python and MariaDB. ERPNext is an open-source ERP built using the Frappe framework."
+    },
+    {
+      question: "Is Frappe Cloud necessary to run ERPNext?",
+      answer: "No, you can self-host ERPNext using Frappe Bench on your own server or use Frappe Cloud for a managed experience."
+    },
+    {
+      question: "What is Frappe HR?",
+      answer: "Frappe HR is a modular HRMS built on top of the Frappe framework. It's designed to manage employee data, payroll, leave, and more."
+    },
+    {
+      question: "Can I integrate third-party apps like WhatsApp or payment gateways with ERPNext?",
+      answer: "Yes, ERPNext is API-driven and allows seamless integration with external services like WhatsApp, Razorpay, and more."
+    },
+    {
+      question: "Do Frappe products support multi-tenancy?",
+      answer: "Yes, Frappe supports multiple sites on the same instance, allowing true multi-tenancy out of the box."
+    }
+  ]}
+/>
