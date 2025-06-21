@@ -7,6 +7,8 @@ image: '/blog/12.webp'
 tags: ['Latest-News']
 ---
 
+import FaqSchema from '../../components/FaqSchema.astro'
+
 ![Codenetic is here.](/blog/12.webp)
 
 
@@ -109,3 +111,19 @@ In a competitive market driven by **public trust**, airlines must go beyond regu
 
 > 📌 *Disclaimer: This blog is for informational purposes based on verified news sources. For flight bookings, passenger safety info, or financial advice, consult certified professionals or official airline representatives.*
 
+### Pricing FAQs
+
+Here are some commonly asked questions about our pricing.
+
+<FaqSchema
+  faqs={[
+    {
+      question: "Can I use CRM and WhatsApp together?",
+      answer: "Yes! Codenetic supports integration of both tools seamlessly.",
+    },
+    {
+      question: "Do you offer agency support?",
+      answer: "Yes, we support white-label and agency reseller models.",
+    },
+  ]}
+/>

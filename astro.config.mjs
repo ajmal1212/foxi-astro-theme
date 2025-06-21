@@ -3,6 +3,7 @@ import partytown from "@astrojs/partytown";
 import tailwind from "@astrojs/tailwind";
 import icon from "astro-icon";
 import cloudflare from '@astrojs/cloudflare'; // ✅ Add this line
+import mdx from '@astrojs/mdx'
 
 import sitemap from "@astrojs/sitemap";
 
@@ -17,6 +18,7 @@ export default defineConfig({
     tailwind(),
     icon(),
     sitemap(),
+    mdx(),
     partytown({
       config: {
         forward: ["dataLayer.push"],

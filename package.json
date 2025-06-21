@@ -26,8 +26,9 @@
     "preview": "astro build && wrangler dev"
   },
   "dependencies": {
-    "@astrojs/cloudflare": "12.5.0",
     "@astrojs/check": "^0.9.4",
+    "@astrojs/cloudflare": "12.5.0",
+    "@astrojs/mdx": "^4.3.0",
     "@astrojs/preact": "^4.1.0",
     "@astrojs/sitemap": "^3.4.0",
     "@astrojs/tailwind": "^6.0.2",
@@ -45,8 +46,8 @@
     "typescript": "^5.4.5"
   },
   "devDependencies": {
-    "wrangler": "4.16.1",
     "@astrojs/partytown": "^2.1.4",
-    "@tailwindcss/typography": "^0.5.13"
+    "@tailwindcss/typography": "^0.5.13",
+    "wrangler": "4.16.1"
   }
 }

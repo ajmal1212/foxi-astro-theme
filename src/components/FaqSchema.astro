@@ -1,0 +1,37 @@
+---
+// FaqSchema.astro
+export interface FAQItem {
+  question: string
+  answer: string
+}
+export interface Props {
+  faqs: FAQItem[]
+}
+const { faqs } = Astro.props
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": faqs.map((faq) => ({
+    "@type": "Question",
+    "name": faq.question,
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": faq.answer
+    }
+  }))
+}
+---
+
+<script type="application/ld+json">
+  {JSON.stringify(faqSchema)}
+</script>
+
+<ul class="space-y-4">
+  {faqs.map(faq => (
+    <li>
+      <strong>{faq.question}</strong><br />
+      <span>{faq.answer}</span>
+    </li>
+  ))}
+</ul>
