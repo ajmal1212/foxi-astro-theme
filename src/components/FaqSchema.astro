@@ -23,9 +23,7 @@ const faqSchema = {
 }
 ---
 
-<script type="application/ld+json">
-  {JSON.stringify(faqSchema)}
-</script>
+<script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
 
 <ul class="space-y-4">
   {faqs.map(faq => (
