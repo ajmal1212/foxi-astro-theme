@@ -1,0 +1,32 @@
+---
+interface Author {
+  name: string;
+  url: string;
+}
+
+interface Props {
+  headline: string;
+  image: string[];
+  datePublished: string;
+  dateModified: string;
+  authors: Author[];
+}
+
+const { headline, image, datePublished, dateModified, authors } = Astro.props as Props;
+
+const newsSchema = {
+  "@context": "https://schema.org",
+  "@type": "NewsArticle",
+  "headline": headline,
+  "image": image,
+  "datePublished": datePublished,
+  "dateModified": dateModified,
+  "author": authors.map((author) => ({
+    "@type": "Person",
+    "name": author.name,
+    "url": author.url
+  }))
+};
+---
+
+<script type="application/ld+json" set:html={JSON.stringify(newsSchema)} />

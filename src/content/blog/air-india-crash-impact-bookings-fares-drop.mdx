@@ -8,6 +8,18 @@ tags: ['Latest-News']
 ---
 
 import FaqSchema from '../../components/FaqSchema.astro'
+import NewsSchema from '../../components/NewsSchema.astro'
+
+<NewsSchema
+  headline="Title of a News Article"
+  image={[ '/blog/12.webp'
+  ]}
+  datePublished="2024-01-05T08:00:00+08:00"
+  dateModified="2024-02-05T09:20:00+08:00"
+  authors={[
+    { name: "Ajmal", url: "https://codenetic.tech/profile/ajmal" }
+  ]}
+/>
 
 ![Codenetic is here.](/blog/12.webp)
 
