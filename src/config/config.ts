@@ -18,19 +18,34 @@ export interface Config {
 	noindex: boolean
 	mode: Mode
 	scrollAnimations: boolean
+	twitterHandle?: string
+	schemaOrg?: Record<string, any>
 }
 
 export const configData: Config = {
-	siteTitle: 'Foxi. Tailwind CSS Astro Starter Kit by Oxygenna',
+	siteTitle: 'Codenetic – Complete Digital Solutions for Every Industry',
 	siteDescription:
-		'Foxi is a design and development agency that specializes in creating beautiful and functional websites.',
+		'From CRM and WhatsApp automation to full digital marketing tools, Codenetic helps businesses grow through smart technology.',
 	ogImage: '/og.jpg',
 	logo: {
 		src: '/logo.svg',
-		alt: 'Foxi. logo'
+		alt: 'Codenetic. logo'
 	},
 	canonical: true,
 	noindex: false,
 	mode: 'auto',
-	scrollAnimations: true
+	scrollAnimations: true,
+	twitterHandle: '@codenetic',
+	schemaOrg: {
+		"@context": "https://schema.org",
+		"@type": "Organization",
+		"name": "Codenetic Tech Solutions",
+		"url": "https://codenetic.tech",
+		"logo": "https://codenetic.tech/logo.svg",
+		"description": "Codenetic offers CRM systems, WhatsApp business integration, and marketing automation tools tailored for every industry.",
+		"founder": {
+			"@type": "Person",
+			"name": "Ajmal"
+		}
+	}
 }
