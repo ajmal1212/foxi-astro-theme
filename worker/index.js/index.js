@@ -63,6 +63,10 @@ export default {
       "/old-post",
       "/about-us-2022",
       "/promo/summer-sale",
+      "/~partytown/",
+      "/template/terms-of-service",
+      "/blog/team-collaboration/",
+      "/blog/mobile-app",
     ];
 
     // 🟠 Handle deleted URLs with 410
