@@ -5,8 +5,10 @@ import { renderers } from './renderers.mjs';
 import { c as createExports, s as serverEntrypointModule } from './chunks/_@astrojs-ssr-adapter_9Ni-0hQK.mjs';
 import { manifest } from './manifest_owLDXiE_.mjs';
 
+// Optional: Astro Islands hydration map (used by SSR)
 const serverIslandMap = new Map();
 
+// Astro page map
 const _page0 = () => import('./pages/404.astro.mjs');
 const _page1 = () => import('./pages/blog/tags/_tag_.astro.mjs');
 const _page2 = () => import('./pages/blog/tags.astro.mjs');
@@ -43,6 +45,7 @@ const pageMap = new Map([
   ["src/pages/index.astro", _page15],
 ]);
 
+// Create the full Astro SSR manifest
 const _manifest = Object.assign(manifest, {
   pageMap,
   serverIslandMap,
@@ -51,20 +54,22 @@ const _manifest = Object.assign(manifest, {
   middleware: () => import('./_astro-internal_middleware.mjs'),
 });
 
-const _args = undefined;
 const _exports = createExports(_manifest);
 const __astrojsSsrVirtualEntry = _exports.default;
 
+// Worker handler
 export default {
   async fetch(request, env, ctx) {
     const url = new URL(request.url);
 
+    // Define your permanently deleted URLs
     const deletedURLs = [
       "/old-post",
       "/about-us-2022",
       "/promo/summer-sale",
     ];
 
+    // Return 410 Gone for deleted URLs
     if (deletedURLs.includes(url.pathname)) {
       return new Response("This URL is gone.", {
         status: 410,
@@ -75,7 +80,20 @@ export default {
       });
     }
 
-    // Delegate to Astro's SSR handler
-    return __astrojsSsrVirtualEntry.fetch(request, env, ctx);
+    try {
+      // Try to fetch the static asset (from ./dist)
+      const assetResponse = await env.ASSETS.fetch(request);
+
+      // If the static asset exists, return it
+      if (assetResponse.status !== 404) {
+        return assetResponse;
+      }
+
+      // Fall back to Astro SSR (routes, or 404.astro)
+      return await __astrojsSsrVirtualEntry.fetch(request, env, ctx);
+    } catch (err) {
+      console.error("Worker error:", err);
+      return new Response("Internal Error", { status: 500 });
+    }
   }
 };
