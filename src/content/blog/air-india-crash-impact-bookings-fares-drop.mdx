@@ -7,6 +7,8 @@ image: '/blog/12.webp'
 tags: ['Latest-News']
 ---
 
+export const pageTitle = 'Air India Crash Triggers 20% Drop in Bookings and 15% Fare Dip Across Routes'
+
 import FaqSchema from '../../components/FaqSchema.astro'
 import NewsSchema from '../../components/NewsSchema.astro'
 import BreadcrumbSchema from '../../components/BreadcrumbSchema.astro'
@@ -20,13 +22,10 @@ import BreadcrumbSchema from '../../components/BreadcrumbSchema.astro'
 
 <BreadcrumbSchema
   items={[
-    { name: 'Codenetic', item: 'https://codenetic.tech' },
-    { name: 'Blog', item: 'https://codenetic.tech/blog' },
-    { name: 'Marketing Tools', item: 'https://codenetic.tech/blog/Latest-News' },
-    { name: '20+ Best Digital Marketing Tools in 2024' } // no item field for the last breadcrumb
+    { name: 'Latest News', item: `https://codenetic.tech/blog/latest-news` },
+    { name: pageTitle, item: `https://codenetic.tech/blog/air-india-crash-impact-bookings-fares-drop` }
   ]}
 />
-
 
 ![Codenetic is here.](/blog/12.webp)
 

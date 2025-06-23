@@ -1,26 +1,47 @@
 ---
-interface BreadcrumbItem {
+interface Item {
   name: string;
-  item?: string; // Optional for last item
+  item?: string;
 }
 
-interface Props {
-  items: BreadcrumbItem[];
-}
-
-const { items } = Astro.props;
-
-// Generate BreadcrumbList Schema
-const breadcrumbSchema = {
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": items.map((item, index) => ({
-    "@type": "ListItem",
-    "position": index + 1,
-    "name": item.name,
-    ...(item.item && { item: item.item }) // only include item URL if provided
-  }))
-};
+const { items } = Astro.props as { items: Item[] };
 ---
 
-<script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "item": {
+          "@type": "Thing",
+          "@id": "https://codenetic.tech",
+          "name": "Home"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "item": {
+          "@type": "Thing",
+          "@id": "https://codenetic.tech/blog",
+          "name": "Blog"
+        }
+      },
+      ...items.map((item, index) => {
+        const position = index + 3;
+        return {
+          "@type": "ListItem",
+          "position": position,
+          "item": {
+            "@type": "Thing",
+            "@id": item.item ?? "",
+            "name": item.name
+          }
+        };
+      })
+    ]
+  }
+</script>
