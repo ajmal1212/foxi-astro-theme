@@ -5,43 +5,45 @@ interface Item {
 }
 
 const { items } = Astro.props as { items: Item[] };
+
+// Constant base breadcrumbs
+const baseBreadcrumbs = [
+  {
+    "@type": "ListItem",
+    "position": 1,
+    "item": {
+      "@type": "Thing",
+      "@id": "https://codenetic.tech",
+      "name": "Home"
+    }
+  },
+  {
+    "@type": "ListItem",
+    "position": 2,
+    "item": {
+      "@type": "Thing",
+      "@id": "https://codenetic.tech/blog",
+      "name": "Blog"
+    }
+  }
+];
+
+// Dynamic breadcrumbs from props
+const dynamicItems = items.map((item, index) => ({
+  "@type": "ListItem",
+  "position": index + 3,
+  "item": {
+    "@type": "Thing",
+    "@id": item.item || "",
+    "name": item.name
+  }
+}));
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [...baseBreadcrumbs, ...dynamicItems]
+};
 ---
 
-<script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-      {
-        "@type": "ListItem",
-        "position": 1,
-        "item": {
-          "@type": "Thing",
-          "@id": "https://codenetic.tech",
-          "name": "Home"
-        }
-      },
-      {
-        "@type": "ListItem",
-        "position": 2,
-        "item": {
-          "@type": "Thing",
-          "@id": "https://codenetic.tech/blog",
-          "name": "Blog"
-        }
-      },
-      ...items.map((item, index) => {
-        const position = index + 3;
-        return {
-          "@type": "ListItem",
-          "position": position,
-          "item": {
-            "@type": "Thing",
-            "@id": item.item ?? "",
-            "name": item.name
-          }
-        };
-      })
-    ]
-  }
-</script>
+<script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
