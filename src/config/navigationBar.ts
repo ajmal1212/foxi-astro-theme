@@ -39,13 +39,13 @@ export const navigationBarData: NavData = {
 	},
 	navItems: [
 		{ name: 'Home', link: '/' },
+		{ name: 'Blog', link: '/blog' },
 		{ name: 'Pricing', link: '/pricing' },
 		{ name: 'Features', link: '/features' },
 		{
 			name: 'Resources',
 			link: '#',
 			submenu: [
-				{ name: 'Blog', link: '/blog' },
 				{ name: 'Changelog', link: '/changelog' },
 				{ name: 'FAQ', link: '/faq' },
 				{ name: 'Terms', link: '/terms' }
