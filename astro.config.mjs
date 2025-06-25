@@ -23,6 +23,12 @@ export default defineConfig({
       forward: ["dataLayer.push"],
     },
   }), react(), markdoc(), keystatic()],
+  markdown: {
+    syntaxHighlight: 'shiki',
+    shikiConfig: {
+      theme: 'github-dark', // or 'dracula', 'nord', etc.
+    },
+  },
   adapter: cloudflare({
     platformProxy: {
       enabled: true,

@@ -1,20 +1,3 @@
-# Foxi - Astro Theme
-
-Open-source Astro website template with fully responsive, customizable TailwindCSS components.
-
-![just-the-basics](https://oxygenna-themes.b-cdn.net/foxi-astro/foxi.png)
-
-[![View live Demo](https://oxygenna-themes.b-cdn.net/foxi-astro/button-demo.svg)](https://foxi.netlify.app)
-[![Page Speed Insights (100%)](https://oxygenna-themes.b-cdn.net/foxi-astro/button-pagespeed.svg)](https://pagespeed.web.dev/analysis/https-foxi-netlify-app/c9ig3t85mu?form_factor=desktop)
-
-## Introduction
-
-### About
-
-Foxi is a free, highly customizable, and production-ready template for Astro, utilizing Tailwind CSS components. Designed with developers in mind, Foxi offers a solid foundation for building modern, high-performance websites quickly and efficiently.
-
-![just-the-basics](https://oxygenna-themes.b-cdn.net/foxi-astro/pagespeedscore.svg)
-
 ### Features
 
 - **Built with Tailwind CSS:** Powered by Tailwind CSS for rapid UI development and responsive design.
@@ -33,45 +16,6 @@ Foxi is a free, highly customizable, and production-ready template for Astro, ut
 - **Modular Design:** The template is organized into reusable blocks enabling easy customization and expansion.
 - **Integrated Analytics:** Includes integrated Google Analytics and Google Tag Manager functionalities.
 - **Sitemap Included:** Includes a sitemap to enhance website navigation and search engine indexing.
-
-### Upgrade to Pro Version
-
-| Feature                   | Free Version               | Pro Version                                                      |
-| :------------------------ | :------------------------- | :--------------------------------------------------------------- |
-| Tailwind CSS              | ✅                         | ✅                                                               |
-| Mobile Responsive         | ✅                         | ✅                                                               |
-| SEO-Friendly              | ✅                         | ✅                                                               |
-| i18n Multilingual Support | ❌                         | ✅                                                               |
-| Keystatic CMS             | ❌                         | ✅                                                               |
-| Content Collections       | ✅                         | ✅                                                               |
-| Mega Menu                 | ❌                         | ✅                                                               |
-| Video Popup               | ❌                         | ✅                                                               |
-| Lottie File Integration   | ❌                         | ✅                                                               |
-| Homepage Variations       | ❌                         | ✅                                                               |
-| Features Page Variations  | ❌                         | ✅                                                               |
-| Integrations Page         | ❌                         | ✅                                                               |
-| Advanced Pricing Page     | ❌                         | ✅                                                               |
-| Blog Collection           | ✅                         | ✅                                                               |
-| Blog Categories           | ✅                         | ✅                                                               |
-| Blog Authors              | ❌                         | ✅                                                               |
-| Post Pagination           | ❌                         | ✅                                                               |
-| eGuides Collection        | ❌                         | ✅                                                               |
-| Roadmap Page              | ❌                         | ✅                                                               |
-| SignUp Page               | ❌                         | ✅                                                               |
-| Changelog Page            | ✅                         | ✅                                                               |
-| FAQ Page                  | ✅                         | ✅                                                               |
-| Terms Page                | ✅                         | ✅                                                               |
-| Working Contact Page      | ❌                         | ✅                                                               |
-| Total Pages               | 10                         | 20+                                                              |
-|                           |                            |                                                                  |
-| Free Updates              | ✅                         | ✅                                                               |
-| License                   | MIT                        | Commercial                                                       |
-|                           |                            |                                                                  |
-| Pricing                   | Free                       | $79.99                                                           |
-|                           | Continue with Free version | [View Pro Version](https://astro.build/themes/details/foxi-pro/) |
-
-[![Get Pro Version](https://oxygenna-themes.b-cdn.net/foxi-pro-astro/primary-button-get-foxi-pro.svg)](https://oxygenna.lemonsqueezy.com/buy/2e32ec07-aa31-45a4-835d-8ebb7f6048cc)
-[![View Foxi Pro live Demo](https://oxygenna-themes.b-cdn.net/foxi-pro-astro/secondary-button-foxi-pro-demo.svg)](https://foxi-pro.netlify.app/)
 
 ## Getting Started
 
@@ -200,15 +144,3 @@ You can add your own fonts by following [this guide](https://docs.astro.build/en
 By default, the site uses an automatic mode switcher, allowing it users to switch between light and dark modes based on the user's system settings or by using the mode switcher in the navigation bar. This is achioeved by setting the `mode-auto` class in the `Layout.astro` file.
 
 If you need to enforce a specific theme, you can set the class above as **`mode-light`** or **`mode-dark`**. When **`mode-light`** is applied, the site will consistently display in light mode, and the switcher will not be functional. Similarly, **`mode-dark`** will force the site to dark mode, with the switcher rendered non-functional. These settings allow you to maintain a fixed appearance across the site regardless of user preferences or system settings.
-
-## License
-
-Copyright © 2024 - Designed & Developed by [Oxygenna](http://www.oxygenna.com/)
-
-Released under the MIT license.
-
-## Join the Community
-
-You can join our community on [Discord](https://discord.gg/YC5Eup8ZEx)!
-
-[![Hire Us](https://oxygenna-themes.b-cdn.net/foxi-astro/hireus.png)](mailto:info@oxygenna.com,christos@oxygenna.com)
