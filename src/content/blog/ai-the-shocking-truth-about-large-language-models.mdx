@@ -60,16 +60,86 @@ The late 2010s and early 2020s witnessed an explosion in the size and capabiliti
 
 ### Comparing the Titans: A Look at Major LLMs
 
-| Model      | Year | Developer | Architecture        | Key Features                               | Limitations                               |
-|------------|------|-----------|---------------------|--------------------------------------------|-------------------------------------------|
-| ELIZA      | 1966 | MIT       | Rule-Based          | First chatbot, keyword matching            | No real understanding, limited responses |
-| LSTM       | 1997 | Hochreiter & Schmidhuber | RNN                | Overcomes vanishing gradient, better memory | Struggles with long-term dependencies    |
-| Word2Vec   | 2013 | Google    | Neural Embeddings   | Captures word relationships, semantic similarity | Context-independent representations      |
-| BERT       | 2018 | Google    | Transformer (Bidirectional) | Context-aware understanding, fine-tuning | Cannot generate text, requires large datasets |
-| GPT-2      | 2019 | OpenAI    | Transformer (Unidirectional) | Large-scale text generation, creative writing | Prone to biases, generates misinformation |
-| GPT-3      | 2020 | OpenAI    | Transformer (Unidirectional) | 175B parameters, human-like text, few-shot learning | High computational cost, occasional errors |
-| GPT-4      | 2023 | OpenAI    | Transformer (Multimodal) | Text, images, code, more accurate responses | Still expensive, not fully autonomous     |
-| Gemma 3   | 2025 | Google    | Transformer (Self-Learning) | Enhanced accuracy, real-time learning      | Emerging, limited testing                 |
+<div class="overflow-x-auto my-6">
+  <table class="min-w-full border-separate border-spacing-y-2 text-sm text-left">
+    <thead>
+      <tr class="bg-zinc-100 dark:bg-zinc-800 text-zinc-700 dark:text-zinc-300">
+        <th class="px-5 py-3 rounded-l-xl">Model</th>
+        <th class="px-5 py-3">Year</th>
+        <th class="px-5 py-3">Developer</th>
+        <th class="px-5 py-3">Architecture</th>
+        <th class="px-5 py-3">Key Features</th>
+        <th class="px-5 py-3 rounded-r-xl">Limitations</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="bg-white dark:bg-zinc-900 text-zinc-800 dark:text-zinc-100 shadow-sm hover:shadow-md transition rounded-xl">
+        <td class="px-5 py-3 rounded-l-xl">ELIZA</td>
+        <td class="px-5 py-3">1966</td>
+        <td class="px-5 py-3">MIT</td>
+        <td class="px-5 py-3">Rule-Based</td>
+        <td class="px-5 py-3">First chatbot, keyword matching</td>
+        <td class="px-5 py-3 rounded-r-xl">No real understanding, limited responses</td>
+      </tr>
+      <tr class="bg-white dark:bg-zinc-900 text-zinc-800 dark:text-zinc-100 shadow-sm hover:shadow-md transition rounded-xl">
+        <td class="px-5 py-3 rounded-l-xl">LSTM</td>
+        <td class="px-5 py-3">1997</td>
+        <td class="px-5 py-3">Hochreiter & Schmidhuber</td>
+        <td class="px-5 py-3">RNN</td>
+        <td class="px-5 py-3">Overcomes vanishing gradient, better memory</td>
+        <td class="px-5 py-3 rounded-r-xl">Struggles with long-term dependencies</td>
+      </tr>
+      <tr class="bg-white dark:bg-zinc-900 text-zinc-800 dark:text-zinc-100 shadow-sm hover:shadow-md transition rounded-xl">
+        <td class="px-5 py-3 rounded-l-xl">Word2Vec</td>
+        <td class="px-5 py-3">2013</td>
+        <td class="px-5 py-3">Google</td>
+        <td class="px-5 py-3">Neural Embeddings</td>
+        <td class="px-5 py-3">Captures word relationships, semantic similarity</td>
+        <td class="px-5 py-3 rounded-r-xl">Context-independent representations</td>
+      </tr>
+      <tr class="bg-white dark:bg-zinc-900 text-zinc-800 dark:text-zinc-100 shadow-sm hover:shadow-md transition rounded-xl">
+        <td class="px-5 py-3 rounded-l-xl">BERT</td>
+        <td class="px-5 py-3">2018</td>
+        <td class="px-5 py-3">Google</td>
+        <td class="px-5 py-3">Transformer (Bidirectional)</td>
+        <td class="px-5 py-3">Context-aware understanding, fine-tuning</td>
+        <td class="px-5 py-3 rounded-r-xl">Cannot generate text, requires large datasets</td>
+      </tr>
+      <tr class="bg-white dark:bg-zinc-900 text-zinc-800 dark:text-zinc-100 shadow-sm hover:shadow-md transition rounded-xl">
+        <td class="px-5 py-3 rounded-l-xl">GPT-2</td>
+        <td class="px-5 py-3">2019</td>
+        <td class="px-5 py-3">OpenAI</td>
+        <td class="px-5 py-3">Transformer (Unidirectional)</td>
+        <td class="px-5 py-3">Large-scale text generation, creative writing</td>
+        <td class="px-5 py-3 rounded-r-xl">Prone to biases, generates misinformation</td>
+      </tr>
+      <tr class="bg-white dark:bg-zinc-900 text-zinc-800 dark:text-zinc-100 shadow-sm hover:shadow-md transition rounded-xl">
+        <td class="px-5 py-3 rounded-l-xl">GPT-3</td>
+        <td class="px-5 py-3">2020</td>
+        <td class="px-5 py-3">OpenAI</td>
+        <td class="px-5 py-3">Transformer (Unidirectional)</td>
+        <td class="px-5 py-3">175B parameters, human-like text, few-shot learning</td>
+        <td class="px-5 py-3 rounded-r-xl">High computational cost, occasional errors</td>
+      </tr>
+      <tr class="bg-white dark:bg-zinc-900 text-zinc-800 dark:text-zinc-100 shadow-sm hover:shadow-md transition rounded-xl">
+        <td class="px-5 py-3 rounded-l-xl">GPT-4</td>
+        <td class="px-5 py-3">2023</td>
+        <td class="px-5 py-3">OpenAI</td>
+        <td class="px-5 py-3">Transformer (Multimodal)</td>
+        <td class="px-5 py-3">Text, images, code, more accurate responses</td>
+        <td class="px-5 py-3 rounded-r-xl">Still expensive, not fully autonomous</td>
+      </tr>
+      <tr class="bg-white dark:bg-zinc-900 text-zinc-800 dark:text-zinc-100 shadow-sm hover:shadow-md transition rounded-xl">
+        <td class="px-5 py-3 rounded-l-xl">Gemma 3</td>
+        <td class="px-5 py-3">2025</td>
+        <td class="px-5 py-3">Google</td>
+        <td class="px-5 py-3">Transformer (Self-Learning)</td>
+        <td class="px-5 py-3">Enhanced accuracy, real-time learning</td>
+        <td class="px-5 py-3 rounded-r-xl">Emerging, limited testing</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 
 ### Beyond Pre-trained: Different Flavors of LLMs
 
