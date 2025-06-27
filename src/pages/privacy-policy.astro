@@ -3,40 +3,53 @@ import Layout from '../layouts/Layout.astro'
 
 const SEO = {
 	title: 'Privacy Policy',
-	description: 'Read the privacy policy for the Codenetic productivity toolkit and social media posting app.'
+	description: 'Read the privacy policy for Codenetic CRM and its WhatsApp integration using the Meta Cloud API.'
 }
 ---
 
 <Layout title={SEO.title} description={SEO.description}>
 	<section class="max-w-3xl mx-auto py-12 px-6 text-gray-800 dark:text-gray-200">
 		<h1 class="text-4xl font-bold mb-6">Privacy Policy</h1>
-		<p class="mb-6">This Privacy Policy explains how we collect, use, and protect the information you provide when using our social media posting app (the "App").</p>
+		<p class="mb-6">This Privacy Policy outlines how Codenetic CRM ("we", "our", or "us") collects, uses, and protects personal information when you use our services, including our integration with the WhatsApp Cloud API ("Service").</p>
 
 		<h2 class="text-2xl font-semibold mt-8 mb-2">1. Information We Collect</h2>
-		<p class="mb-2"><strong>Account Information:</strong> When you link your social media accounts, we collect your profile ID, page ID, and access tokens required to post content.</p>
-		<p class="mb-6"><strong>Content Data:</strong> We store metadata such as captions, media URLs, and scheduled times for posts you create using the App.</p>
+		<ul class="list-disc list-inside mb-6">
+			<li><strong>WhatsApp Business Account Information:</strong> When connecting your WhatsApp Business Account, we collect and store your WhatsApp phone number, Business Account ID, and access tokens required to send and receive messages.</li>
+			<li><strong>Message Metadata:</strong> We store metadata including message IDs, timestamps, delivery/read receipts, and phone numbers involved in conversations.</li>
+			<li><strong>User Communication Data:</strong> We store the content of messages sent and received through the WhatsApp Cloud API for operational and audit purposes.</li>
+		</ul>
 
 		<h2 class="text-2xl font-semibold mt-8 mb-2">2. How We Use Your Information</h2>
 		<ul class="list-disc list-inside mb-6">
-			<li>To enable posting content to your connected social media platforms</li>
-			<li>To store your preferences and account linkage details</li>
-			<li>To send alerts when access tokens are expiring or actions are required</li>
+			<li>To enable real-time communication between your team and customers via WhatsApp</li>
+			<li>To deliver messages, media, and notifications through the WhatsApp Cloud API</li>
+			<li>To provide analytics, support, and improve CRM performance</li>
+			<li>To notify you of expired access tokens or authentication issues</li>
 		</ul>
 
-		<h2 class="text-2xl font-semibold mt-8 mb-2">3. Data Sharing</h2>
-		<p class="mb-6">We do not sell, rent, or share your personal data with third parties, except:</p>
+		<h2 class="text-2xl font-semibold mt-8 mb-2">3. User Consent</h2>
+		<p class="mb-6">All users contacted via WhatsApp must have opted in to receive messages from your business. It is your responsibility to ensure proper user consent is obtained before initiating any communication using our platform.</p>
+
+		<h2 class="text-2xl font-semibold mt-8 mb-2">4. Data Sharing</h2>
 		<ul class="list-disc list-inside mb-6">
-			<li>When required by law</li>
-			<li>To the APIs of social media platforms you choose to connect (e.g., Meta/Facebook/Instagram)</li>
+			<li>We do not sell or rent your data to third parties.</li>
+			<li>We only share data with Meta Platforms, Inc. as required for sending/receiving messages via the WhatsApp Cloud API.</li>
+			<li>We may share data when required by law or for the protection of legal rights.</li>
 		</ul>
 
-		<h2 class="text-2xl font-semibold mt-8 mb-2">4. Security</h2>
-		<p class="mb-6">We use industry-standard security practices, including encryption and access control. However, no digital system can guarantee absolute security.</p>
+		<h2 class="text-2xl font-semibold mt-8 mb-2">5. Data Retention</h2>
+		<p class="mb-6">We retain message content and metadata only for the duration required to operate the service, resolve disputes, and meet compliance requirements. Data can be deleted upon request.</p>
 
-		<h2 class="text-2xl font-semibold mt-8 mb-2">5. Your Rights</h2>
-		<p class="mb-6">You can request data deletion at any time by contacting us at <a href="mailto:support@codenetic.tech" class="text-blue-400 underline">support@codenetic.tech</a>.</p>
+		<h2 class="text-2xl font-semibold mt-8 mb-2">6. Security</h2>
+		<p class="mb-6">We implement encryption, access controls, and secure storage practices to protect your data. While we strive to use commercially acceptable means to protect your information, no method of transmission over the Internet is 100% secure.</p>
 
-		<h2 class="text-2xl font-semibold mt-8 mb-2">6. Changes to This Policy</h2>
-		<p>We may update this policy periodically. All updates will be posted here with the date of change.</p>
+		<h2 class="text-2xl font-semibold mt-8 mb-2">7. Your Rights</h2>
+		<p class="mb-6">You may request deletion or correction of your data at any time by contacting <a href="mailto:support@codenetic.tech" class="text-blue-400 underline">support@codenetic.tech</a>.</p>
+
+		<h2 class="text-2xl font-semibold mt-8 mb-2">8. Changes to This Policy</h2>
+		<p class="mb-6">We may revise this Privacy Policy from time to time. Updates will be published on this page with the date of the latest revision.</p>
+
+		<h2 class="text-2xl font-semibold mt-8 mb-2">9. Contact Us</h2>
+		<p>If you have any questions about this policy, you can reach us at <a href="mailto:support@codenetic.tech" class="text-blue-400 underline">support@codenetic.tech</a>.</p>
 	</section>
 </Layout>
