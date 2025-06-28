@@ -12,8 +12,8 @@
 import { Icon } from 'astro-icon/components'
 
 // URL Parsing and breadcrumb generation
-const url = new URL(Astro.request.url)
-const pathname = url.pathname
+const rawPathname = new URL(Astro.request.url).pathname
+const pathname = rawPathname.replace(/\.html$/, '')
 const segments = pathname.split('/').filter(Boolean)
 const breadcrumbs = ['Home', ...segments]
 
