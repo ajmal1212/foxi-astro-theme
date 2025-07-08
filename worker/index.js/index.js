@@ -2,7 +2,7 @@ globalThis.process ??= {};
 globalThis.process.env ??= {};
 
 import { renderers } from './renderers.mjs';
-import { c as createExports, s as serverEntrypointModule } from './chunks/_@astrojs-ssr-adapter_9Ni-0hQK.mjs';
+import { c as createExports } from './chunks/_@astrojs-ssr-adapter_9Ni-0hQK.mjs';
 import { manifest } from './manifest_owLDXiE_.mjs';
 
 const serverIslandMap = new Map();
@@ -51,7 +51,6 @@ const _manifest = Object.assign(manifest, {
   middleware: () => import('./_astro-internal_middleware.mjs'),
 });
 
-const _args = undefined;
 const _exports = createExports(_manifest);
 const __astrojsSsrVirtualEntry = _exports.default;
 
