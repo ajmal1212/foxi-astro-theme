@@ -1,0 +1,237 @@
+---
+// src/pages/profile.astro
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="About Me | Founder & CEO of Codenetic">
+  <div class="min-h-screen bg-gradient-to-br from-white via-gray-50 to-gray-100 dark:from-gray-900 dark:via-gray-900 dark:to-gray-950">
+    <div class="container mx-auto px-4 py-16 max-w-6xl">
+      
+      <!-- Hero Section -->
+      <section class="flex flex-col md:flex-row items-center gap-8 md:gap-16 mb-24">
+        <div class="w-full md:w-2/5 flex justify-center">
+            <div class="relative">
+                <div class="w-64 h-64 rounded-full bg-gradient-to-r from-purple-600 to-teal-500 p-1 shadow-xl">
+                <div class="bg-white dark:bg-gray-900 w-full h-full rounded-full overflow-hidden">
+                    <!-- Replace this line -->
+                    <img 
+                    src="/ajmal.webp" 
+                    alt="Ajmal" 
+                    class="w-full h-full object-cover"
+                    width="256"
+                    height="256"
+                    />
+                </div>
+                </div>
+                <div class="absolute -bottom-4 -right-4 bg-gradient-to-r from-purple-600 to-teal-500 text-white rounded-full px-4 py-2 text-sm font-bold shadow-lg">
+                CEO & Founder
+                </div>
+            </div>
+            </div>
+        
+        <div class="w-full md:w-3/5 text-center md:text-left mt-8 md:mt-0">
+          <h1 class="text-4xl mt-20 md:text-5xl font-bold mb-4 bg-gradient-to-r from-purple-600 to-teal-500 dark:from-purple-400 dark:to-teal-300 bg-clip-text text-transparent">
+            Driving Innovation in Business Automation
+          </h1>
+          <p class="text-xl mt-12 text-gray-700 dark:text-gray-300 mb-6">
+            Founder & CEO of Codenetic Tech Solution, creating revolutionary CRM and AI workflow platforms
+          </p>
+          
+          <div class="flex flex-wrap justify-center md:justify-start gap-4 mb-8">
+            <a href="https://codenetic.tech" class="flex items-center gap-2 px-4 py-2 bg-gray-800 hover:bg-gray-900 text-white rounded-lg transition-all shadow-md hover:shadow-lg">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M12.586 4.586a2 2 0 112.828 2.828l-3 3a2 2 0 01-2.828 0 1 1 0 00-1.414 1.414 4 4 0 005.656 0l3-3a4 4 0 00-5.656-5.656l-1.5 1.5a1 1 0 101.414 1.414l1.5-1.5zm-5 5a2 2 0 012.828 0 1 1 0 101.414-1.414 4 4 0 00-5.656 0l-3 3a4 4 0 105.656 5.656l1.5-1.5a1 1 0 10-1.414-1.414l-1.5 1.5a2 2 0 11-2.828-2.828l3-3z" clip-rule="evenodd" />
+              </svg>
+              codenetic.tech
+            </a>
+            
+            <a href="mailto:codenetic.tech@gmail.com" class="flex items-center gap-2 px-4 py-2 bg-gray-100 hover:bg-gray-200 text-gray-800 dark:bg-gray-700 dark:hover:bg-gray-600 dark:text-gray-200 rounded-lg transition-all">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
+                <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
+              </svg>
+              Contact Me
+            </a>
+          </div>
+          
+          <div class="flex justify-center md:justify-start space-x-4">
+            <a href="#" class="p-2 bg-gray-100 dark:bg-gray-800 rounded-full hover:bg-purple-100 dark:hover:bg-purple-900/50 transition-colors">
+              <svg class="w-6 h-6 text-gray-600 dark:text-gray-400" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84"></path>
+              </svg>
+            </a>
+            <a href="#" class="p-2 bg-gray-100 dark:bg-gray-800 rounded-full hover:bg-blue-100 dark:hover:bg-blue-900/50 transition-colors">
+              <svg class="w-6 h-6 text-gray-600 dark:text-gray-400" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"></path>
+              </svg>
+            </a>
+            <a href="https://github.com/ajmal1212" target="_blank" class="p-2 bg-gray-100 dark:bg-gray-800 rounded-full hover:bg-indigo-100 dark:hover:bg-indigo-900/50 transition-colors">
+              <svg class="w-6 h-6 text-gray-600 dark:text-gray-400" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"></path>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </section>
+      
+      <!-- About & Expertise Section -->
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 mb-24">
+        <!-- About Section -->
+        <section>
+          <h2 class="text-3xl font-bold mb-8 pb-2 border-b-2 border-purple-500/30 dark:border-teal-400/30 inline-block">
+            About Me
+          </h2>
+          
+          <div class="space-y-6">
+            <p class="text-lg text-gray-700 dark:text-gray-300">
+              With over 8 years of experience in IT product development and marketing, I've dedicated my career to creating solutions that bridge technology and business needs. My journey began in corporate IT environments, where I gained deep insights into the challenges businesses face with fragmented systems.
+            </p>
+            
+            <div class="bg-purple-50 dark:bg-purple-900/20 p-6 rounded-2xl border border-purple-100 dark:border-purple-800/50">
+              <h3 class="text-xl font-semibold mb-3 text-purple-700 dark:text-purple-300">Founding Vision</h3>
+              <p class="text-gray-700 dark:text-gray-300 italic">
+                "I founded Codenetic to solve a critical problem I observed throughout my career: businesses were drowning in disconnected tools. Our mission is to create an integrated ecosystem where CRM, communication, and automation work together seamlessly."
+              </p>
+            </div>
+            
+            <p class="text-lg text-gray-700 dark:text-gray-300">
+              Today, as Founder & CEO of Codenetic Tech Solution, I lead a passionate team building an all-in-one platform that combines CRM capabilities with WhatsApp automation and AI-driven workflows. Our solution eliminates the friction between sales, marketing, and customer support operations.
+            </p>
+          </div>
+        </section>
+        
+        <!-- Expertise Section -->
+        <section>
+          <h2 class="text-3xl font-bold mb-8 pb-2 border-b-2 border-purple-500/30 dark:border-teal-400/30 inline-block">
+            Expertise & Solutions
+          </h2>
+          
+          <div class="space-y-6">
+            <div class="bg-white dark:bg-gray-800 p-6 rounded-2xl shadow-md border border-gray-200 dark:border-gray-700 hover:shadow-lg transition-shadow">
+              <div class="flex items-start gap-4">
+                <div class="bg-purple-100 dark:bg-purple-900/50 p-3 rounded-lg">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-purple-600 dark:text-purple-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                  </svg>
+                </div>
+                <div>
+                  <h3 class="text-xl font-bold mb-2 text-gray-900 dark:text-white">CRM Development</h3>
+                  <p class="text-gray-600 dark:text-gray-400">
+                    Building intelligent customer relationship management systems that centralize interactions, track customer journeys, and provide actionable insights for business growth.
+                  </p>
+                </div>
+              </div>
+            </div>
+            
+            <div class="bg-white dark:bg-gray-800 p-6 rounded-2xl shadow-md border border-gray-200 dark:border-gray-700 hover:shadow-lg transition-shadow">
+              <div class="flex items-start gap-4">
+                <div class="bg-teal-100 dark:bg-teal-900/50 p-3 rounded-lg">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-teal-600 dark:text-teal-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z" />
+                  </svg>
+                </div>
+                <div>
+                  <h3 class="text-xl font-bold mb-2 text-gray-900 dark:text-white">WhatsApp Automation</h3>
+                  <p class="text-gray-600 dark:text-gray-400">
+                    Creating sophisticated automation flows for WhatsApp that handle customer inquiries, send notifications, and facilitate transactions without manual intervention.
+                  </p>
+                </div>
+              </div>
+            </div>
+            
+            <div class="bg-white dark:bg-gray-800 p-6 rounded-2xl shadow-md border border-gray-200 dark:border-gray-700 hover:shadow-lg transition-shadow">
+              <div class="flex items-start gap-4">
+                <div class="bg-purple-100 dark:bg-purple-900/50 p-3 rounded-lg">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-purple-600 dark:text-purple-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+                  </svg>
+                </div>
+                <div>
+                  <h3 class="text-xl font-bold mb-2 text-gray-900 dark:text-white">AI Workflow Integration</h3>
+                  <p class="text-gray-600 dark:text-gray-400">
+                    Developing AI-powered workflows that learn from interactions, predict customer needs, and automate complex business processes across departments.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+      
+      <!-- Professional Journey -->
+      <section class="mb-24">
+        <h2 class="text-3xl font-bold mb-8 pb-2 border-b-2 border-purple-500/30 dark:border-teal-400/30 inline-block">
+          Professional Journey
+        </h2>
+        
+        <div class="relative pl-8 border-l-2 border-purple-500/20 dark:border-teal-400/20">
+          <!-- Current Position -->
+          <div class="mb-10 relative">
+            <div class="absolute -left-11 top-1 w-6 h-6 rounded-full bg-gradient-to-r from-purple-600 to-teal-500 border-4 border-white dark:border-gray-900"></div>
+            <div class="bg-purple-500/10 dark:bg-teal-400/10 p-5 rounded-xl">
+              <div class="flex justify-between flex-wrap">
+                <span class="font-bold text-lg text-purple-700 dark:text-teal-300">Founder & CEO</span>
+                <span class="text-purple-600 dark:text-teal-400 font-medium">2025 - Present</span>
+              </div>
+              <p class="font-semibold text-gray-900 dark:text-white">Codenetic Tech Solution</p>
+              <p class="mt-2 text-gray-700 dark:text-gray-300">
+                Founded and currently lead Codenetic, an all-in-one platform integrating CRM, WhatsApp Automation, and AI workflow solutions. Our platform eliminates the need for multiple disconnected tools by providing:
+              </p>
+              <ul class="mt-2 space-y-1 pl-5 list-disc text-gray-700 dark:text-gray-300">
+                <li>Unified customer data management</li>
+                <li>Automated WhatsApp communication workflows</li>
+                <li>AI-driven business process automation</li>
+                <li>Real-time analytics across all customer touchpoints</li>
+              </ul>
+            </div>
+          </div>
+          
+          <!-- Previous Position -->
+          <div class="mb-10 relative">
+            <div class="absolute -left-11 top-1 w-6 h-6 rounded-full bg-gray-400 border-4 border-white dark:border-gray-900"></div>
+            <div class="bg-gray-100 dark:bg-gray-700/50 p-5 rounded-xl">
+              <div class="flex justify-between flex-wrap">
+                <span class="font-bold text-lg text-gray-800 dark:text-gray-200">IT Product Development & Marketing</span>
+                <span class="text-gray-600 dark:text-gray-400 font-medium">2018 - 2025</span>
+              </div>
+              <p class="font-semibold text-gray-700 dark:text-gray-300">Technology Solutions Provider</p>
+              <p class="mt-2 text-gray-600 dark:text-gray-400">
+                Managed the full product lifecycle for enterprise SaaS solutions, from concept to market launch. Responsibilities included:
+              </p>
+              <ul class="mt-2 space-y-1 pl-5 list-disc text-gray-600 dark:text-gray-400">
+                <li>Leading cross-functional product development teams</li>
+                <li>Developing go-to-market strategies for new products</li>
+                <li>Creating marketing campaigns that increased user adoption by 40%</li>
+                <li>Analyzing market trends to inform product roadmap decisions</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      <!-- Philosophy Section -->
+      <section class="bg-gradient-to-r from-purple-50 to-teal-50 dark:from-purple-900/30 dark:to-teal-900/30 rounded-3xl p-8 md:p-12 mb-16">
+        <div class="max-w-4xl mx-auto text-center">
+          <div class="inline-block p-3 bg-white dark:bg-gray-800 rounded-full mb-6 shadow-lg">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-purple-600 dark:text-purple-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+            </svg>
+          </div>
+          <h2 class="text-3xl font-bold mb-6 bg-gradient-to-r from-purple-600 to-teal-500 dark:from-purple-400 dark:to-teal-300 bg-clip-text text-transparent">
+            The Codenetic Vision
+          </h2>
+          <blockquote class="text-xl italic text-gray-700 dark:text-gray-300 max-w-3xl mx-auto">
+            "At Codenetic, we believe that technology should simplify business operations, not complicate them. Our integrated platform brings together CRM, communication, and automation in one cohesive ecosystem, eliminating the friction of disconnected tools and empowering businesses to focus on growth and customer relationships."
+          </blockquote>
+        </div>
+      </section>
+    </div>
+  </div>
+</Layout>
+
+<style is:global>
+  /* Smooth transitions for dark mode */
+  html, body {
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+</style>

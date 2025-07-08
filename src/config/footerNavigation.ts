@@ -113,6 +113,10 @@ export const footerNavigationData: FooterData = {
 				{
 					subCategory: 'Join us',
 					subCategoryLink: '/contact'
+				},
+				{
+					subCategory: 'Profile',
+					subCategoryLink: '/profile'
 				}
 			]
 		}
